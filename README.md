@@ -95,3 +95,34 @@
 - `UNION`: Combines results of two or more queries into a single result set, eliminating duplicate rows. Queries must have the same number of columns and compatible types.
 - `UNION ALL`: Combines query results similarly to UNION but retains duplicate rows.
 
+### 18. Data Processing
+- Involves converting and manipulating data types for compatibility with functions or operations.
+- **Casting data types**:
+```sql
+value::datatype
+-- or --
+CAST(value AS datatype)
+```
+
+### 19. Common Data Types
+- **Numeric**: `INTEGER`, `FLOAT`, `DECIMAL`, `MONEY`
+- **Textual**: `TEXT`, `VARCHAR`, `CHAR`
+- **Date/Time**: `DATE`, `TIMESTAMP`, `INTERVAL`
+- **Boolean**: `BOOLEAN`
+
+### 20. CASE Statement
+- Evaluates conditions sequentially, returning the first match:
+```sql
+CASE
+  WHEN condition1 THEN output1
+  WHEN condition2 THEN output2
+  ELSE output3
+END AS column_name
+```
+
+### 21. COALESCE
+- Returns the first non-null value from a list of arguments:
+```sql
+COALESCE(first_value, second_value, third_value, ...)
+```
+
