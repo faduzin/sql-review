@@ -60,6 +60,17 @@
 
 ### 12. Subqueries
 - A query nested within another query, commonly used within a `WHERE` clause.
+- Can be positioned in different parts of a query:
+  - **In `WHERE`**: Filters results based on a subquery that must return a single column.
+  - **In `WITH`** (Common Table Expression - CTE): Defines a temporary named result set.
+  ```sql
+  WITH table_name AS (
+    subquery
+  )
+  SELECT...
+  ```
+  - **In `FROM`**: Creates a derived table that can be queried similarly to a regular table. This approach may impact readability and is typically less optimal than using a CTE.
+  - **In `SELECT`** (Correlated Subquery): Executes a subquery for each row of the main query, potentially negatively impacting performance.
 
 ### 13. Performance Consideration
 - Filtering (`WHERE`) significantly affects query performance, especially with large databases. Careful filtering practices are advised.
@@ -79,4 +90,8 @@
   - **LEFT JOIN**: Returns all rows from the first (left) table and matching rows from the second (right) table. Non-matching rows from the second table are filled with NULL values.
   - **RIGHT JOIN**: Returns all rows from the second (right) table and matching rows from the first (left) table. Non-matching rows from the first table are filled with NULL values.
   - **FULL JOIN**: Returns all rows from both tables. Non-matching rows from either table are filled with NULL values.
+
+### 17. UNION and UNION ALL
+- `UNION`: Combines results of two or more queries into a single result set, eliminating duplicate rows. Queries must have the same number of columns and compatible types.
+- `UNION ALL`: Combines query results similarly to UNION but retains duplicate rows.
 
