@@ -56,6 +56,7 @@
   - `MIN(column)`: Returns the minimum value.
   - `MAX(column)`: Returns the maximum value.
   - `AVG(column)`: Calculates the average value.
+  - `SUM(column)`: Calculates the total sum of values in a specified column.
 
 ### 12. Subqueries
 - A query nested within another query, commonly used within a `WHERE` clause.
@@ -71,4 +72,11 @@
 ### 15. HAVING
 - Filters grouped data based on aggregate conditions.
 - Primarily designed for filtering aggregate function results.
+
+### 16. JOIN Operations
+- Relate two or more tables using common keys or columns.
+  - **INNER JOIN**: Returns only rows with matching values in both tables based on the specified key(s).
+  - **LEFT JOIN**: Returns all rows from the first (left) table and matching rows from the second (right) table. Non-matching rows from the second table are filled with NULL values.
+  - **RIGHT JOIN**: Returns all rows from the second (right) table and matching rows from the first (left) table. Non-matching rows from the first table are filled with NULL values.
+  - **FULL JOIN**: Returns all rows from both tables. Non-matching rows from either table are filled with NULL values.
 
