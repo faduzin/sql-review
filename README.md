@@ -48,3 +48,27 @@
   - `LIKE`: Compares text values using patterns; `%` is a wildcard representing any sequence of characters, `_` represents a single character.
   - `ILIKE`: Similar to `LIKE`, but case-insensitive.
 
+### 11. Aggregate Functions
+- Summarize or calculate statistics across multiple rows.
+  - `COUNT(column)`: Counts non-null values in a specific column.
+  - `COUNT(*)`: Counts all rows, including those with null values.
+  - `COUNT(DISTINCT column)`: Counts distinct non-null values.
+  - `MIN(column)`: Returns the minimum value.
+  - `MAX(column)`: Returns the maximum value.
+  - `AVG(column)`: Calculates the average value.
+
+### 12. Subqueries
+- A query nested within another query, commonly used within a `WHERE` clause.
+
+### 13. Performance Consideration
+- Filtering (`WHERE`) significantly affects query performance, especially with large databases. Careful filtering practices are advised.
+
+### 14. GROUP BY
+- Groups rows sharing common values in specific columns.
+- Often used with aggregate functions; without aggregate functions, it functions similarly to `DISTINCT`.
+- Although it's possible to reference columns by their ordinal position, this is discouraged because it reduces readability.
+
+### 15. HAVING
+- Filters grouped data based on aggregate conditions.
+- Primarily designed for filtering aggregate function results.
+
