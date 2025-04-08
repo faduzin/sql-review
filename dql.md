@@ -1,6 +1,4 @@
-# SQL Review
-
-## SQL Queries - Keywords and Commands
+## Data Query Language
 
 ### 1. `SELECT`
 - Used to select specific columns from a table.
