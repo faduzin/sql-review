@@ -28,3 +28,7 @@ SQL commands are grouped into five main categories based on their functions:
 
 Each category links to a dedicated markdown file containing detailed explanations and practical examples.
 
+## Achievements
+
+- Solved all SQL Hackerrank problems
+
